@@ -4,5 +4,8 @@
   ],
   "automatic": {
     "ipaddress": "192.168.33.10"
+  },
+  "redis-server": {
+    "port": "6380",
   }
 }
