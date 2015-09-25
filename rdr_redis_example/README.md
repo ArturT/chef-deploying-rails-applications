@@ -29,3 +29,11 @@ Prepare machine:
     $ bundle exec knife solo prepare root@192.168.33.10
 
 It generated file: `nodes/192.168.33.10.json`
+
+## Create cookbook
+
+    $ bundle exec knife cookbook create redis-server -o site-cookbooks
+
+## Update node configuration
+
+    $ bundle exec knife solo cook root@192.168.33.10
