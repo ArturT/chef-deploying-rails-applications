@@ -11,12 +11,7 @@ apt_repository 'redis-server' do
   distribution node['lsb']['codename']
 end
 
-bash 'Installing Redis Server Package' do
-  user 'root'
-  code <<-EOC
-    apt-get install -y redis-server
-  EOC
-end
+package 'redis-server'
 
 bash 'Removing existing redis-server config file and adding new one' do
   user 'root'
