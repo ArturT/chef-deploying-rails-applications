@@ -23,3 +23,9 @@ Add public key to root user:
 
     # now you can log in without password
     $ ssh root@192.168.33.10
+
+Prepare machine:
+
+    $ bundle exec knife solo prepare root@192.168.33.10
+
+It generated file: `nodes/192.168.33.10.json`
