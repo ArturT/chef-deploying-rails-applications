@@ -6,12 +6,14 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-bash 'Adding Redis PPA and Installing Package' do
+apt_repository 'redis-server' do
+  uri 'ppa:chris-lea/redis-server'
+  distribution node['lsb']['codename']
+end
+
+bash 'Installing Redis Server Package' do
   user 'root'
   code <<-EOC
-    apt-get install -y python-software-properties
-    add-apt-repository -y ppa:chris-lea/redis-server
-    apt-get update
     apt-get install -y redis-server
   EOC
 end
