@@ -9,7 +9,7 @@ Create a new vagrant machine:
     $ vagrant init ubuntu/trusty64
     $ vagrant up
 
-User `private_network` option in `Vagrantfile`.
+Use `private_network` option in `Vagrantfile`.
 
 
 Add public key to root user:
